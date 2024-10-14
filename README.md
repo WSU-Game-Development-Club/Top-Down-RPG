@@ -10,6 +10,8 @@ Unity Version: 2022.3.31f1
 
 [How to Push and Pull](#how-to-push-add-your-changes-and-pull-update-your-project)
 
+[Push Yourself!](#push-yourself)
+
 # How to Add Project to Your Device from GitHub
 <ol>
   <li>Install <a href = https://git-scm.com/downloads>Git</a> if you haven't already</li>
@@ -49,3 +51,5 @@ See [How to Manage Branches](#how-to-manage-branches) to fix this
   <li>Pulling should be done at the beginning of every project work session so you are up to date</li>
 </ul>
 <ol></ol>
+
+# Push Yourself
