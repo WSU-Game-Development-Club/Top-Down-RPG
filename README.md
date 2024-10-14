@@ -25,6 +25,7 @@ Unity Version: 2022.3.31f1
   <li>You should now have the project's main branch avaliable to open in the Unity Editor</li>
 </ol>
 After this, your project may not have the desired code or assets
+
 See the [How to Manage Branches](#how-to-manage-branches) to fix this
 
 # How to Manage Branches
