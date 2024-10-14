@@ -8,7 +8,7 @@ Unity Version: 2022.3.31f1
 
 [How to Manage Branches](#how-to-manage-branches)
 
-[How to Push and Pull](#how-to-push-(add-your-changes)-and-pull-(update-your-project))
+[How to Push and Pull](#how-to-push-add-your-changes-and-pull-update-your-project)
 
 # How to Add Project to Your Device from GitHub
 <ol>
