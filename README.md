@@ -16,7 +16,7 @@ Unity Version: 2022.3.31f1
   <li>Copy the project by selecting "<> Code" at the top of the page and Copy the link displayed</li>
   <li>Search your device for "Git Bash" and open it</li>
   <li>Type in <kbd>git clone (link)</kbd> and use the link you copied</li>
-  <li>Type "ls" to see where the folder has been placed (it is most likely in the Users folder on your device)</li>
+  <li>Type <kbd>ls</kbd> to see where the folder has been placed (it is most likely in the Users folder on your device)</li>
     <ul>
       <li>Feel free to move the folder to wherever you like</li>
     </ul>
@@ -33,7 +33,7 @@ See [How to Manage Branches](#how-to-manage-branches) to fix this
   <li>Open Git Bash and navigate to the project directory</li>
   <ul>
     <li>If you do not know how to traverse directories to get to your project, use <a href = https://support.cs.wm.edu/index.php/tips-and-tricks/basic-linux-commands>this resource</a> for guidance</li>
-    <li>You will mainly be using cd and ls</li>
+    <li>You will mainly be using <kbd>cd</kbd> and <kbd>ls</kbd></li>
   </ul>
   <li>Use <kbd>git branch -a</kbd> to list all of the project's branches</li>
   <li>To work on a branch, add it to your device and switch to it by using <kbd>git checkout (branch name)</kbd></li>
