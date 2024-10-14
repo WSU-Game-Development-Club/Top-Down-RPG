@@ -14,8 +14,8 @@ Unity Version: 2022.3.31f1
       <li>Feel free to move the folder to wherever you like</li>
     </ul>
   <li>Open Unity Hub and select "Add" from the projects menu</li>
-  <li>Find the file Topdown_RPG and open until you get to the folder with the assets, packages, etc. and select "Open"</li>
-  <li>You now have the project on your device</li>
+  <li>Find the Topdown_RPG file and open until you get to the folder with the assets, packages, etc. and select "Open"</li>
+  <li>You should now have the project avaliable to open in the Unity Editor</li>
 </ol>
 
 # How to Manage Branches
