@@ -16,6 +16,9 @@ public class HoldStillState : EnemyState
 
     private void Update() {
         if(Time.time - _timeEntered > _duration) {
+            Debug.Log(_enemySM);
+            Debug.Log(_stateToExitTo);
+            Debug.Log(this);
             _enemySM.SwitchState(_stateToExitTo, this);
         }
     }

@@ -64,6 +64,8 @@ public class EnemySM : MonoBehaviour {
         SwitchState(_defaultState, _defaultState);
     }
 
+
+
     /// <summary>
     /// Disables the siblings of the current state, then enables the new state
     /// </summary>
@@ -71,7 +73,7 @@ public class EnemySM : MonoBehaviour {
     /// <param name="caller">the EnemyState that called the function</param>
     /// <returns>void</returns>
     public void SwitchState(EnemyState newState, EnemyState caller) {
-        EnemyState[] states = caller.transform.parent.GetComponentsInChildren<EnemyState>();
+        EnemyState[] states = caller.gameObject.GetComponentsInChildren<EnemyState>(true);
         foreach (EnemyState state in states) {
 
             state.gameObject.SetActive(false);
