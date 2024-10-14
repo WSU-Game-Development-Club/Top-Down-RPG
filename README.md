@@ -36,8 +36,7 @@ See [How to Manage Branches](#how-to-manage-branches) to fix this
     <li>You will mainly be using cd and ls</li>
   </ul>
   <li>Use <kbd>git branch -a</kbd> to list all of the project's branches</li>
-  <li>To work on a branch, add it to your device by using <kbd>git fetch origin (branch name)</kbd></li>
-  <li>Next, switch to the branch using <kbd>git switch (branch name)</kbd> (no need to include origin this time)</li>
+  <li>To work on a branch, add it to your device and switch to it by using <kbd>git checkout (branch name)</kbd></li>
   <ul>
     <li>Sometimes, there may be conflicts. Git will tell you what files are conflicting and how to fix it</li>
   </ul>
