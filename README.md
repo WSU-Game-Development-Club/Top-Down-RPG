@@ -76,4 +76,5 @@ Use the skills you've learned to:
   <li>Modify <samp>push_yourself.txt</samp> using vim or notepad to include your name, date, and project you're working on</li>
   <li>Add, commit and push your changes</li>
 </ol>
+
 Congratulations! You're on your way to becoming a Git pro.
