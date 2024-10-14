@@ -5,7 +5,7 @@ Unity Version: 2022.3.31f1
 
 ## Git Guides
 <ul>
- <li>[How to Manage Branches](#how-to-manage-branches)</li>
+ - [How to Manage Branches](#how-to-manage-branches)
 </ul>
 
 # How to Add Project to Your Device from GitHub
