@@ -65,7 +65,8 @@ See [How to Manage Branches](#how-to-manage-branches) to fix this
   <li>Navigate to the desired branch you'd like to push to (the branch you pulled from)</li>
   <li>Use <kbd>git status</kbd> to see what you have modified/added</li>
   <li>Use <kbd>git add (file name)</kbd> to add modified/added work</li>
-  <li>Use <kbd>git push</kbd> to push your changes to the branch</li>
+  <li>Use <kbd>git commit -m "(commit description)"</kbd> to commit the changes you've added to your local branch</li>
+  <li>Use <kbd>git push</kbd> to push your changes to the branch in GitHub</li>
 </ol>
 
 # Push Yourself
