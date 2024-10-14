@@ -3,7 +3,10 @@ WSU Game Development's Club first project!
 
 Unity Version: 2022.3.31f1
 
-[go to manage branches](#how-to-manage-branches)
+## Git Guides
+<ul>
+ <li>[How to Manage Branches](#how-to-manage-branches)</li>
+</ul>
 
 # How to Add Project to Your Device from GitHub
 <ol>
