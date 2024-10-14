@@ -25,6 +25,9 @@ Unity Version: 2022.3.31f1
 # How to Manage Branches
 <ol>
   <li>Open Git Bash and navigate to the project directory</li>
+  <ul>
+    <li>If you do not know how to traverse directories to get to your project, use <a href = https://support.cs.wm.edu/index.php/tips-and-tricks/basic-linux-commands>this resource</a> for guidance</li>
+  </ul>
 </ol>
 
 # How to Push (Add Your Changes) and Pull (Update Your Project)
