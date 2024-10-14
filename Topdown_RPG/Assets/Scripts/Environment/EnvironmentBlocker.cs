@@ -6,8 +6,8 @@ using UnityEngine;
 public class EnvironmentBlocker : MonoBehaviour
 {
     [SerializeField] private bool isBlocking;
-    private Animator animator;
 
+    private Animator animator;
     private Collider2D blockerCollider;
 
     void Awake()
