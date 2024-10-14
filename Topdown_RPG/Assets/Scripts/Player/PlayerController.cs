@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float moveSpeed = 5f;
+    [SerializeField] private float moveSpeed = 5f;
     private Rigidbody2D rb;
     private Vector2 movement;
 
@@ -18,11 +18,12 @@ public class PlayerController : MonoBehaviour
         // Input
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 
     void FixedUpdate()
     {
         // Movement
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        
     }
 }
