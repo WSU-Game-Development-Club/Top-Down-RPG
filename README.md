@@ -24,10 +24,8 @@ Unity Version: 2022.3.31f1
   <li>Find the Topdown_RPG file and open until you get to the folder with the assets, packages, etc. and select "Open"</li>
   <li>You should now have the project's main branch avaliable to open in the Unity Editor</li>
 </ol>
-<ul>
-  <li>After this, your project may not have the desired code or assets</li>
-  <li>See the "How to Manage Branches" to fix this</li>
-</ul>
+After this, your project may not have the desired code or assets
+See the [How to Manage Branches](#how-to-manage-branches) to fix this
 
 # How to Manage Branches
 <ol>
