@@ -29,6 +29,7 @@ Unity Version: 2022.3.31f1
     <li>If you do not know how to traverse directories to get to your project, use <a href = https://support.cs.wm.edu/index.php/tips-and-tricks/basic-linux-commands>this resource</a> for guidance</li>
     <li>You will mainly be using cd and ls</li>
   </ul>
+  <li>Use "git branch -a" to list all of the project's branches</li>
 </ol>
 
 # How to Push (Add Your Changes) and Pull (Update Your Project)
