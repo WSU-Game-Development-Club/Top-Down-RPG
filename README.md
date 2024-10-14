@@ -3,7 +3,7 @@ WSU Game Development's Club first project!
 
 Unity Version: 2022.3.31f1
 
-<h1>How to Add Project to Your Device from GitHub</h1>
+#How to Add Project to Your Device from GitHub
 <ol>
   <li>Install <a href = https://git-scm.com/downloads>Git</a> if you haven't already</li>
   <li>Copy code from project by going to "<> Code" -> Local HTTPS at the top of the page and selecting the Copy icon</li>
@@ -18,6 +18,6 @@ Unity Version: 2022.3.31f1
   <li>You now have the project on your device</li>
 </ol>
 
-<h2>How to Manage Branches</h2>
+#How to Manage Branches
 
-<h3>How to Push (Add Your Changes) and Pull (Update Your Project)</h3>
+#How to Push (Add Your Changes) and Pull (Update Your Project)
