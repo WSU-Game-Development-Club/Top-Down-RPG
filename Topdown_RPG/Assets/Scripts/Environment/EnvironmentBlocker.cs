@@ -16,7 +16,7 @@ public class EnvironmentBlocker : MonoBehaviour
         animator = GetComponent<Animator>();
 
         blockerCollider.enabled = isBlocking;
-        animator?.SetBool("Blocking", isBlocking);
+        if (animator != null) animator.SetBool("Blocking", isBlocking);
     }
 
     /// <summary>
@@ -32,6 +32,6 @@ public class EnvironmentBlocker : MonoBehaviour
 
         this.isBlocking = isBlocking;
         blockerCollider.enabled = this.isBlocking;
-        animator?.SetBool("Blocking", this.isBlocking);
+        if (animator != null) animator.SetBool("Blocking", this.isBlocking);
     }
 }
