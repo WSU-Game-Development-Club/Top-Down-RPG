@@ -50,6 +50,22 @@ See [How to Manage Branches](#how-to-manage-branches) to fix this
 <ul>
   <li>Pulling should be done at the beginning of every project work session so you are up to date</li>
 </ul>
-<ol></ol>
+<ol>
+  <li>Navigate to the desired branch you'd like to work on</li>
+  <li>Use <kbd>git status</kbd> to see if your project is not up to date</li>
+  <li>Use <kbd>git pull</kbd></li>
+  <li>Your project should now be updated</li>
+</ol>
+
+## To Push
+<ul>
+  <li>Should be done when a functional feature/modification has been completed</li>
+</ul>
+<ol>
+  <li>Navigate to the desired branch you'd like to push to (the branch you pulled from)</li>
+  <li>Use <kbd>git status</kbd> to see what you have modified/added</li>
+  <li>Use <kbd>git add (file name)</kbd> to add modified/added work</li>
+  <li>Use <kbd>git push</kbd> to push your changes to the branch</li>
+</ol>
 
 # Push Yourself
