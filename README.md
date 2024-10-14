@@ -17,3 +17,7 @@ Unity Version: 2022.3.31f1
   <li>Find the file Topdown_RPG and open until you get to the folder with the assets, packages, etc. and select "Open"</li>
   <li>You now have the project on your device</li>
 </ol>
+
+<h2>How to Manage Branches</h2>
+
+<h3>How to Push (Add Your Changes) and Pull (Update Your Project)</h3>
