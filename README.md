@@ -15,12 +15,17 @@ Unity Version: 2022.3.31f1
     </ul>
   <li>Open Unity Hub and select "Add" from the projects menu</li>
   <li>Find the Topdown_RPG file and open until you get to the folder with the assets, packages, etc. and select "Open"</li>
-  <li>You should now have the project avaliable to open in the Unity Editor</li>
+  <li>You should now have the project's main branch avaliable to open in the Unity Editor</li>
 </ol>
 <ul>
   <li>After this, your project may not have the desired code or assets</li>
   <li>See the "How to Manage Branches" to fix this</li>
 </ul>
+
+# How to Manage Branches
+<ol>
+  <li>Open Git Bash and navigate to the project directory</li>
+</ol>
 
 # How to Push (Add Your Changes) and Pull (Update Your Project)
 ## To Pull
