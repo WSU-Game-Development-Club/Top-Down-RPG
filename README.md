@@ -35,9 +35,9 @@ See [How to Manage Branches](#how-to-manage-branches) to fix this
     <li>If you do not know how to traverse directories to get to your project, use <a href = https://support.cs.wm.edu/index.php/tips-and-tricks/basic-linux-commands>this resource</a> for guidance</li>
     <li>You will mainly be using cd and ls</li>
   </ul>
-  <li>Use "git branch -a" to list all of the project's branches</li>
-  <li>To work on a branch, add it to your device by using "git fetch origin (branch name)"</li>
-  <li>Next, switch to the branch using "git switch (branch name)" (no need to include origin this time)</li>
+  <li>Use <kbd>git branch -a</kbd> to list all of the project's branches</li>
+  <li>To work on a branch, add it to your device by using <kbd>git fetch origin (branch name)</kbd></li>
+  <li>Next, switch to the branch using <kbd>git switch (branch name)</kbd> (no need to include origin this time)</li>
   <ul>
     <li>Sometimes, there may be conflicts. Git will tell you what files are conflicting and how to fix it</li>
   </ul>
