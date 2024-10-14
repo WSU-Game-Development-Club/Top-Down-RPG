@@ -36,7 +36,12 @@ See [How to Manage Branches](#how-to-manage-branches) to fix this
     <li>You will mainly be using cd and ls</li>
   </ul>
   <li>Use "git branch -a" to list all of the project's branches</li>
-  <li>To work on a branch, add it to your device by using "git fetch origin (branch name)"
+  <li>To work on a branch, add it to your device by using "git fetch origin (branch name)"</li>
+  <li>Next, switch to the branch using "git switch (branch name)" (no need to include origin this time)</li>
+  <ul>
+    <li>Sometimes, there may be conflicts. Git will tell you what files are conflicting and how to fix it</li>
+  </ul>
+  <li>Your Unity project should now have the branch's data</li>
 </ol>
 
 # How to Push (Add Your Changes) and Pull (Update Your Project)
