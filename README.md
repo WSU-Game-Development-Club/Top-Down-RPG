@@ -18,5 +18,4 @@ Unity Version: 2022.3.31f1
   <li>You should now have the project avaliable to open in the Unity Editor</li>
 </ol>
 
-# How to Push (Add Your Changes) and Pull (Update Your Project)
 
