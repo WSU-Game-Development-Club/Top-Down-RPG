@@ -46,15 +46,26 @@ public class MoveRandomlyState : EnemyState
     /// <returns>A Vector2 representing the position in world space</returns>
     public Vector2 GetRandomPosition(Vector2 distanceRange) {
 
-        Vector2 randomDirection = Random.insideUnitCircle.normalized;
-        float randomDistance = Random.Range(distanceRange.x, distanceRange.y);
-        Vector2 targetPosition = (Vector2)_enemySM.transform.position + randomDirection * randomDistance;
-        RaycastHit2D hit = Physics2D.CircleCast(_enemySM.transform.position, _enemySM.Collider.radius, randomDirection, randomDistance, _environmentLayer);
+        int maxAttempts = 5;
+        Vector2 targetPosition = _enemySM.transform.position ;
 
-        if (hit.collider != null) {
-            return hit.point + hit.normal * _enemySM.Collider.radius;
+        for(int i= 0; i < maxAttempts; i++) {
+            Vector2 randomDirection = Random.insideUnitCircle.normalized;
+            float randomDistance = Random.Range(distanceRange.x, distanceRange.y);
+            targetPosition = (Vector2)_enemySM.transform.position + randomDirection * randomDistance;
+            RaycastHit2D hit = Physics2D.CircleCast(_enemySM.transform.position, _enemySM.Collider.radius, randomDirection, randomDistance, _environmentLayer);
+
+            if (hit.collider != null) {
+                targetPosition = hit.point + hit.normal * _enemySM.Collider.radius;
+            }
+            if(Vector2.Distance(targetPosition, _enemySM.transform.position) >= randomDistance * 0.8f) {
+                return targetPosition;
+            }
+            
         }
         return targetPosition;
+
+
     }
     private void FixedUpdate() {
         float closeEnoughDistance = _enemySM.Collider.radius * 0.5f;

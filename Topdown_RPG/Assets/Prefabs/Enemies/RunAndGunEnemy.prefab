@@ -272,4 +272,4 @@ MonoBehaviour:
   _movementForce: 0
   _environmentLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
