@@ -61,7 +61,7 @@ public class EnemySM : MonoBehaviour {
     }
     [SerializeField] private EnemyState _defaultState;
     private void Start() {
-        SwitchState(_defaultState, _defaultState);
+        SwitchState(_defaultState);
     }
 
 
@@ -72,11 +72,15 @@ public class EnemySM : MonoBehaviour {
     /// <param name="newState">the new state to enable</param>
     /// <param name="caller">the EnemyState that called the function</param>
     /// <returns>void</returns>
-    public void SwitchState(EnemyState newState, EnemyState caller) {
-        EnemyState[] states = caller.gameObject.GetComponentsInChildren<EnemyState>(true);
-        foreach (EnemyState state in states) {
+    public void SwitchState(EnemyState newState) {
+        Transform parent = newState.transform.parent;
 
-            state.gameObject.SetActive(false);
+        EnemyState[] states = parent.gameObject.GetComponentsInChildren<EnemyState>(true);
+        foreach (EnemyState state in states) {
+            if (state.transform != parent) {
+                state.gameObject.SetActive(false);
+            }
+
         }
         ResetMovementParameters();
         newState.gameObject.SetActive(true);

@@ -18,7 +18,7 @@ public abstract class EnemyState : MonoBehaviour
             _stateToExitTo = this;
         }
         if (_defaultSubState != null) {
-            _enemySM.SwitchState(_defaultSubState, _defaultSubState);
+            _enemySM.SwitchState(_defaultSubState);
         }
 
         _timeEntered = Time.time;

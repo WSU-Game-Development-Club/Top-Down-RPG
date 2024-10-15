@@ -49,7 +49,6 @@ public class MoveRandomlyState : EnemyState
         Vector2 randomDirection = Random.insideUnitCircle.normalized;
         float randomDistance = Random.Range(distanceRange.x, distanceRange.y);
         Vector2 targetPosition = (Vector2)_enemySM.transform.position + randomDirection * randomDistance;
-        Debug.Log(_enemySM);
         RaycastHit2D hit = Physics2D.CircleCast(_enemySM.transform.position, _enemySM.Collider.radius, randomDirection, randomDistance, _environmentLayer);
 
         if (hit.collider != null) {
@@ -60,11 +59,11 @@ public class MoveRandomlyState : EnemyState
     private void FixedUpdate() {
         float closeEnoughDistance = _enemySM.Collider.radius * 0.5f;
         if(Vector2.Distance(_enemySM.transform.position, _target) <= closeEnoughDistance) {
-            _enemySM.SwitchState(_stateToExitTo, this);
+            _enemySM.SwitchState(_stateToExitTo);
             return;
         }
         if(Time.time - _timeEntered > _abortTime) {
-            _enemySM.SwitchState(_stateToExitTo, this);
+            _enemySM.SwitchState(_stateToExitTo);
 
             return;
         }
