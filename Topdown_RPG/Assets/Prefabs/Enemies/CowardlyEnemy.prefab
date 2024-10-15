@@ -175,9 +175,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3639055678795975332}
-  - component: {fileID: 5291306884957440050}
+  - component: {fileID: 6590730787343359393}
   m_Layer: 0
-  m_Name: RandomMovementState
+  m_Name: FleeFromPlayerState
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -198,7 +198,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2414679425811044612}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5291306884957440050
+--- !u!114 &6590730787343359393
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -207,18 +207,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 3265955349377854953}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bff905acaf49382469f96a9c30c9402e, type: 3}
+  m_Script: {fileID: 11500000, guid: e3c57cbd06593e44c826ed6db2261747, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _stateToExitTo: {fileID: 5680336619795680886}
   _defaultSubState: {fileID: 0}
-  _distanceRange: {x: 8, y: 8}
+  _distanceRange: {x: 8, y: 10}
   _useDefaultSpeedAndForce: 1
   _movementSpeed: 0
   _movementForce: 0
   _environmentLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
 --- !u!1 &6288790293191237283
 GameObject:
   m_ObjectHideFlags: 0
@@ -263,7 +263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7f1a76de1401d1458a255192f4c89a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _stateToExitTo: {fileID: 5291306884957440050}
+  _stateToExitTo: {fileID: 6590730787343359393}
   _defaultSubState: {fileID: 0}
   _environmentLayer:
     serializedVersion: 2

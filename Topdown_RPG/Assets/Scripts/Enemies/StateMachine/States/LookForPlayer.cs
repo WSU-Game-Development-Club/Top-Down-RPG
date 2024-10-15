@@ -21,7 +21,7 @@ public class LookForPlayer : EnemyState
         }
         Vector2 dirToPlayer = _player.transform.position - _enemySM.transform.position;
         if(Physics2D.CircleCast(_enemySM.transform.position, _enemySM.Collider.radius, dirToPlayer, distToPlayer, _environmentLayer)) {
-            //return;
+            return;
         }
         _enemySM.SwitchState(_stateToExitTo);
     }

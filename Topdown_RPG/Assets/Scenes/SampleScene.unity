@@ -442,7 +442,7 @@ GameObject:
   - component: {fileID: 565542233}
   - component: {fileID: 565542232}
   - component: {fileID: 565542231}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Static Sprite (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -679,7 +679,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 930379297}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -927,7 +927,7 @@ GameObject:
   - component: {fileID: 1178720523}
   - component: {fileID: 1178720522}
   - component: {fileID: 1178720521}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Static Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1199,7 +1199,7 @@ GameObject:
   - component: {fileID: 1385193479}
   - component: {fileID: 1385193478}
   - component: {fileID: 1385193477}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Static Sprite (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1642,7 +1642,7 @@ GameObject:
   - component: {fileID: 2113897047}
   - component: {fileID: 2113897046}
   - component: {fileID: 2113897045}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Static Sprite (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
