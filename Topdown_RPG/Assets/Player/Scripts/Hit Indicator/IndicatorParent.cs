@@ -10,17 +10,16 @@ public class IndicatorParent : MonoBehaviour
 {
     private Transform player;
     private Vector2 playerLocation;
-
-
     
     private void Awake()
     {
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        // changed to find object of type because it's faster
+        //player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        player = FindObjectOfType<PlayerController>().transform;
     }
     private void Update()
     {
         playerLocation = player.transform.position;
-        transform.position = (playerLocation);
-         
+        transform.position = (playerLocation);         
     }
 }

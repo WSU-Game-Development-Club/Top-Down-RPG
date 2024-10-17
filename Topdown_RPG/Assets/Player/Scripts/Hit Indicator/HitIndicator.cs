@@ -7,7 +7,6 @@ using UnityEngine;
 /// it like idk destroy itself or somthing, not sure, hmmmm ummm
 /// </summary>
 public class HitIndicator : MonoBehaviour
-
 {
     // This method will be triggered by the Animation Event
     public void DestroySelf()

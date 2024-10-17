@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Attacking : MonoBehaviour
 {
-
     private Camera mainCamera;
     private Vector2 mousePos;
 
@@ -12,8 +11,7 @@ public class Attacking : MonoBehaviour
     private float fireTimer;
 
     private bool canMelee;
-    private float meleeTimer;
-    
+    private float meleeTimer;    
 
     private PolygonCollider2D meleeColider;
 
@@ -25,31 +23,17 @@ public class Attacking : MonoBehaviour
     [SerializeField] private float meleeDelay;
     [SerializeField] private GameObject hitIndicator;
 
-
-
-
-
     private void Awake()
     {
         //get the camera using its tag
-        mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-
+        // changed to main camera object
+        //mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        mainCamera = Camera.main;
         meleeColider = meleeRange.GetComponent<PolygonCollider2D>();
-
-
-
-
-
-
     }
-
-
 
     void Update()
     {
-        //playerLocation = player.transform.position;
-
-
         //get mouse position in the screen space
         mousePos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
 
@@ -66,13 +50,9 @@ public class Attacking : MonoBehaviour
         Shoot();
 
         //you'll never guess what this does
-        Melee();
+        Melee();        
 
-        
-
-        Debug.DrawLine(gunRotationPoint.transform.position, mousePos, Color.red);
-
-        
+        Debug.DrawLine(gunRotationPoint.transform.position, mousePos, Color.red);        
     }
 
     /// <summary>
@@ -94,26 +74,18 @@ public class Attacking : MonoBehaviour
         }
     }
 
-
-
     /// <summary>
     /// This function checks if we can shoot based off a timer
     /// </summary>
     void Shoot()
     {
-
         Timer(ref fireTimer, fireDelay, ref canFire);
-
 
         if(Input.GetMouseButton(0) && canFire)
         {
             canFire = false;
             Instantiate(bullet, gunLocation.position, gunLocation.rotation);
         }
-
-
-
-
     }
 
     /// <summary>
@@ -124,18 +96,12 @@ public class Attacking : MonoBehaviour
         Timer(ref meleeTimer, meleeDelay, ref canMelee);
 
         if (Input.GetMouseButtonDown(1) && canMelee)
-        {
-            
+        {            
             canMelee = false;
             StartCoroutine(EnableMeleeCollider());
-            //Debug.Log("melee");
- 
-            
+            //Debug.Log("melee");            
         }
-
     }
-
-
 
     /// <summary>
     /// used in combination with Start courintine to allow the melee hitscan to be activated for a certain ammount of time after click
@@ -149,7 +115,6 @@ public class Attacking : MonoBehaviour
         meleeColider.enabled = false;
     }
 
-
     /// <summary>
     /// Checks the collision
     /// </summary>
@@ -157,17 +122,9 @@ public class Attacking : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Enemy") && meleeColider.enabled)
-        {
-            
+        {            
             meleeColider.enabled = false;
             Instantiate(hitIndicator);
-
         }
-        
-
-       
     }
-
-
 }
-

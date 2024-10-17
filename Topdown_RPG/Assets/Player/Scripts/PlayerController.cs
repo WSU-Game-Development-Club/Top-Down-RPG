@@ -28,5 +28,4 @@ public class PlayerController : MonoBehaviour
         rb.velocity = new Vector2(Input.GetAxis("Horizontal"),
             Input.GetAxis("Vertical")).normalized * speed;
     }
-
 }

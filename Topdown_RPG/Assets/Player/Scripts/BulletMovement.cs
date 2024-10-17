@@ -9,12 +9,9 @@ using UnityEngine;
 /// </summary>
 public class BulletMovement : MonoBehaviour
 {
-
     [SerializeField] private float bulletSpeed;
-    [SerializeField] private float bulletLife;
-    
+    [SerializeField] private float bulletLife;    
     [SerializeField] private GameObject hitIndicator;
-
 
     // reference to game object's rigidbody behavior
     private Rigidbody2D rb;
@@ -23,37 +20,30 @@ public class BulletMovement : MonoBehaviour
 
     private float timer;
 
-
     // called when script is loaded into memory
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         bulletColider = GetComponent<CapsuleCollider2D>();
-
     }
 
     // Update is called once per frame
     void Update()
     {
-
-
         transform.Translate(Vector2.right * bulletSpeed * Time.deltaTime);
 
         timer += Time.deltaTime;
         if(timer > bulletLife)
         {
-            Destroy(gameObject);
             timer = 0;
-        }
-
-        
+            Destroy(gameObject);            
+        }        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Enemy") && bulletColider.enabled)
         {
-
             Destroy(gameObject);
             Instantiate(hitIndicator);
         }
