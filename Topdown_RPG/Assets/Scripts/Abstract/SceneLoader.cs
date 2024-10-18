@@ -58,7 +58,7 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene(sceneToLoad.Name);
 
         // unallow play
-        Debug.Log("OnSceneTransitionStarted");
+        // Debug.Log("OnSceneTransitionStarted");
         return Task.CompletedTask;
     }
 
@@ -69,7 +69,7 @@ public class SceneLoader : MonoBehaviour
     public Task FinalizeScene()
     {
         // dunno
-        Debug.Log("OnSceneTransitionFinalize");
+        // Debug.Log("OnSceneTransitionFinalize");
         return Task.CompletedTask;
     }
 
@@ -83,7 +83,7 @@ public class SceneLoader : MonoBehaviour
         // UnDarken Screen Here
 
         // allow play
-        Debug.Log("OnSceneTransitionComplete");
+        // Debug.Log("OnSceneTransitionComplete");
         return Task.CompletedTask;
     }
 }

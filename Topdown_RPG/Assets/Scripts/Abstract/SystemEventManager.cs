@@ -18,7 +18,6 @@ public static class SystemEventManager
     /// handle start of transition to scene.
     /// return type for subscribers must be => Task.
     ///     Include: using System.Threading.Tasks;
-    /// make sure to use await correctly inside method.
     /// </summary>
     public static event AsyncUnityAction<SceneField> OnSceneTransitionStarted;
 
@@ -26,7 +25,6 @@ public static class SystemEventManager
     /// handle finalizization of a transition to another scene.
     /// return type for subscribers must be => Task.
     ///     Include: using System.Threading.Tasks;
-    /// make sure to use await correctly inside subscriber.
     /// </summary>
     public static event AsyncUnityAction OnSceneTransitionFinalize;
 
@@ -34,7 +32,6 @@ public static class SystemEventManager
     /// handle transition to scene completed.
     /// return type for subscribers must be => Task.
     ///     Include: using System.Threading.Tasks;
-    /// make sure to use await correctly inside subscriber.
     /// </summary>
     public static event AsyncUnityAction OnSceneTransitionComplete;
 
@@ -61,14 +58,13 @@ public static class SystemEventManager
     public static event UnityAction OnStateComplete;
 
     /// <summary>
-    /// broadcasts to all listeners for each event asyncorously (in order)
+    /// broadcasts to all listeners for each event asynchronously (in order)
     ///     Order: OnSceneTransitionStarted, OnSceneTransitionFinalize, OnSceneTransitionComplete
     /// </summary>
-    /// <param name="sceneToUnload"> scene to unload. </param>
     /// <param name="sceneToLoad"> scene to load. </param>
     public async static void TransitionToScene(SceneField sceneToLoad)
     {
-        // asynchrously wait for each SceneTransitionStarted subscriber to be called before moving to the next events
+        // asynchrously wait for each SceneTransitionStarted subscriber to be called before moving to the next event for scene transition
         if (OnSceneTransitionStarted != null)
         {
             List<Task> sceneTransitionStartedTasks = new List<Task>();
@@ -81,7 +77,7 @@ public static class SystemEventManager
             await Task.WhenAll(sceneTransitionStartedTasks);
         }
 
-        // asynchrously wait for each SceneTransitionStarted subscriber to be called before moving to the next events
+        // asynchrously wait for each SceneTransitionStarted subscriber to be called before moving to the next event for scene transition
         if (OnSceneTransitionFinalize != null)
         {
             List<Task> sceneTransitionFinalizeTasks = new List<Task>();
@@ -94,7 +90,7 @@ public static class SystemEventManager
             await Task.WhenAll(sceneTransitionFinalizeTasks);
         }
 
-        // asynchrously wait for each SceneTransitionComplete subscriber to be called before moving to the next events
+        // asynchrously wait for each SceneTransitionComplete subscriber to be called
         if (OnSceneTransitionComplete != null)
         {
             List<Task> sceneTransitionCompleteTasks = new List<Task>();
