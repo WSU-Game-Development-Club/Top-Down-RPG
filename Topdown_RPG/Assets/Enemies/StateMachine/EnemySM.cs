@@ -6,7 +6,7 @@ using static UnityEngine.GraphicsBuffer;
 [RequireComponent(typeof(Rigidbody2D))]
 
 //This is the statemachine class, of which all the states should be children.
-public class EnemySM : MonoBehaviour {
+public class EnemySM : MonoBehaviour, IDamageable {
 
     [SerializeField] private float _defaultMovementSpeed;
     public float DefaultMovementSpeed {
@@ -55,6 +55,7 @@ public class EnemySM : MonoBehaviour {
     }
 
     private void Awake() {
+        _currentHealth = _maxHealth;
         _rb = GetComponent<Rigidbody2D>();
         _collider = GetComponent<CircleCollider2D>();
         ResetMovementParameters();
@@ -118,6 +119,18 @@ public class EnemySM : MonoBehaviour {
         _movementParameters.Force = _defaultMovementForce;
     }
 
+
+    [SerializeField] private float _maxHealth;
+    private float _currentHealth;
+    public void Damage(float amount)
+    {
+        _currentHealth -= amount;
+        if(_currentHealth < 0){
+            Destroy(gameObject);
+        }
+
+
+    }
 }
 public struct EnemyMovementParameters {
     public EnemyMovementParameters(Vector2 target, float speed, float force) {
