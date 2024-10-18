@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 1034357314899706926}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -172,6 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06594e39f2733440982fdddf39e0c1da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  meleeDamage: 100
   bullet: {fileID: 6595819043397827874, guid: 59e4030b170fa4a8aa12446d7c5c3415, type: 3}
   gunRotationPoint: {fileID: 6302754405237183791}
   meleeRange: {fileID: 7974736055586448212}
