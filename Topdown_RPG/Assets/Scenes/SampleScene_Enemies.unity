@@ -122,6 +122,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD:Topdown_RPG/Assets/Scenes/Player_SampleScene.unity
 --- !u!1 &514692182
 GameObject:
@@ -244,6 +245,8 @@ CircleCollider2D:
   serializedVersion: 2
   m_Radius: 0.5
 =======
+=======
+>>>>>>> 6b701a6e21a538348fc39fa94da57a5f3657b494
 --- !u!1001 &148394814
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -415,7 +418,10 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a5524ed4f6fe2747bfae27ca59e4c88, type: 3}
+<<<<<<< HEAD
 >>>>>>> e97bf46 (Added some example enemy types):Topdown_RPG/Assets/Scenes/SampleScene.unity
+=======
+>>>>>>> 6b701a6e21a538348fc39fa94da57a5f3657b494
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -793,8 +799,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD:Topdown_RPG/Assets/Scenes/Player_SampleScene.unity
 =======
+=======
+>>>>>>> 6b701a6e21a538348fc39fa94da57a5f3657b494
 --- !u!1 &930379296
 GameObject:
   m_ObjectHideFlags: 0
@@ -956,7 +965,10 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+<<<<<<< HEAD
 >>>>>>> e97bf46 (Added some example enemy types):Topdown_RPG/Assets/Scenes/SampleScene.unity
+=======
+>>>>>>> 6b701a6e21a538348fc39fa94da57a5f3657b494
 --- !u!1 &1036534739
 GameObject:
   m_ObjectHideFlags: 0
@@ -1014,7 +1026,11 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
+<<<<<<< HEAD
   m_SortingOrder: -1
+=======
+  m_SortingOrder: 0
+>>>>>>> 6b701a6e21a538348fc39fa94da57a5f3657b494
   m_Sprite: {fileID: -5177388603050735206, guid: 8884154dfe85442a3a3578be807dbcdf, type: 3}
   m_Color: {r: 0.32986403, g: 0.6603774, b: 0.25854397, a: 1}
   m_FlipX: 0
@@ -1035,15 +1051,22 @@ Transform:
   m_GameObject: {fileID: 1036534739}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: 0, y: 0, z: 0}
+=======
+  m_LocalPosition: {x: -0.9297, y: 2.7312, z: 0}
+>>>>>>> 6b701a6e21a538348fc39fa94da57a5f3657b494
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD:Topdown_RPG/Assets/Scenes/Player_SampleScene.unity
 --- !u!1001 &4217364236904982167
 =======
+=======
+>>>>>>> 6b701a6e21a538348fc39fa94da57a5f3657b494
 --- !u!1 &1178720519
 GameObject:
   m_ObjectHideFlags: 0
@@ -1203,7 +1226,10 @@ SpriteRenderer:
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &1214400565
+<<<<<<< HEAD
 >>>>>>> e97bf46 (Added some example enemy types):Topdown_RPG/Assets/Scenes/SampleScene.unity
+=======
+>>>>>>> 6b701a6e21a538348fc39fa94da57a5f3657b494
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -1211,6 +1237,7 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+<<<<<<< HEAD
 <<<<<<< HEAD:Topdown_RPG/Assets/Scenes/Player_SampleScene.unity
     - target: {fileID: 1034357314899706926, guid: 5e319a28479824eb987c34f8b436fe8e, type: 3}
       propertyPath: meleeDelay
@@ -1265,6 +1292,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
 =======
+=======
+>>>>>>> 6b701a6e21a538348fc39fa94da57a5f3657b494
     - target: {fileID: 2414679425811044612, guid: 5a5524ed4f6fe2747bfae27ca59e4c88, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.38498616
@@ -1309,14 +1338,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: StationaryEnemy (1)
       objectReference: {fileID: 0}
+<<<<<<< HEAD
 >>>>>>> e97bf46 (Added some example enemy types):Topdown_RPG/Assets/Scenes/SampleScene.unity
+=======
+>>>>>>> 6b701a6e21a538348fc39fa94da57a5f3657b494
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
+<<<<<<< HEAD
 <<<<<<< HEAD:Topdown_RPG/Assets/Scenes/Player_SampleScene.unity
   m_SourcePrefab: {fileID: 100100000, guid: 5e319a28479824eb987c34f8b436fe8e, type: 3}
 =======
+=======
+>>>>>>> 6b701a6e21a538348fc39fa94da57a5f3657b494
   m_SourcePrefab: {fileID: 100100000, guid: 5a5524ed4f6fe2747bfae27ca59e4c88, type: 3}
 --- !u!1001 &1237112895
 PrefabInstance:
@@ -1976,18 +2011,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< HEAD
 >>>>>>> e97bf46 (Added some example enemy types):Topdown_RPG/Assets/Scenes/SampleScene.unity
+=======
+>>>>>>> 6b701a6e21a538348fc39fa94da57a5f3657b494
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 619394802}
+<<<<<<< HEAD
 <<<<<<< HEAD:Topdown_RPG/Assets/Scenes/Player_SampleScene.unity
   - {fileID: 4217364236904982167}
   - {fileID: 1036534741}
   - {fileID: 514692184}
 =======
+=======
+>>>>>>> 6b701a6e21a538348fc39fa94da57a5f3657b494
   - {fileID: 1025181066}
   - {fileID: 1036534741}
   - {fileID: 426365524}
