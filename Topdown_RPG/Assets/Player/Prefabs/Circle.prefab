@@ -101,7 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletSpeed: 35.31
   bulletLife: 0.35
-  player: {fileID: 0}
+  bulletDamage: 100
   hitIndicator: {fileID: 6429115628783744405, guid: e14af8f3a6b2b44efb40765aa6ef8b59, type: 3}
 --- !u!50 &922113623546404517
 Rigidbody2D:
