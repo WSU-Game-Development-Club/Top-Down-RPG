@@ -12,10 +12,10 @@ TagManager:
   - Environment
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Enemies
+  - PlayerProjectiles
+  - EnemyProjectiles
   - 
   - 
   - 

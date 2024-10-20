@@ -16,7 +16,7 @@ public class Attacking : MonoBehaviour
 
     private PolygonCollider2D meleeColider;
 
-    [SerializeField] private GameObject bullet;
+    [SerializeField] private Projectile bulletPrefab;
     [SerializeField] private GameObject gunRotationPoint;
     [SerializeField] private GameObject meleeRange;
     [SerializeField] private Transform gunLocation;
@@ -85,7 +85,10 @@ public class Attacking : MonoBehaviour
         if(Input.GetMouseButton(0) && canFire)
         {
             canFire = false;
-            Instantiate(bullet, gunLocation.position, gunLocation.rotation);
+            Projectile bullet = Instantiate(bulletPrefab, gunLocation.position, gunLocation.rotation);
+            Vector2 direction = gunLocation.rotation * Vector3.right.normalized;
+            bullet.Fire(direction);
+
         }
     }
 
@@ -144,7 +147,6 @@ public class Attacking : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("help");
 
         if (collision.CompareTag("Enemy") && meleeColider.enabled)
         {

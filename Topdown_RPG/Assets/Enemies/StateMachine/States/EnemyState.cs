@@ -23,4 +23,10 @@ public abstract class EnemyState : MonoBehaviour
 
         _timeEntered = Time.time;
     }
+    public void ExitStateImmediate() {
+        if (_stateToExitTo == null) {
+            return;
+        }
+        _enemySM.SwitchState(_stateToExitTo);
+    }
 }

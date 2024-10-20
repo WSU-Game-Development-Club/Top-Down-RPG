@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5370789831621124553}
   - component: {fileID: 8410326977318168789}
   - component: {fileID: 8857842720018110328}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: StationaryEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b0d5f43d1363fb74e84e2c2eda35733c, type: 3}
   m_Color: {r: 0.5735849, g: 0.36796016, b: 0.36796016, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -165,6 +165,7 @@ MonoBehaviour:
   _defaultMovementSpeed: 0
   _defaultMovementForce: 0
   _defaultState: {fileID: 2941029798553456779}
+  _maxHealth: 30
 --- !u!1 &7455525543463642739
 GameObject:
   m_ObjectHideFlags: 0
@@ -175,7 +176,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3087452795774862673}
   - component: {fileID: 2941029798553456779}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShootState
   m_TagString: Untagged
   m_Icon: {fileID: 0}

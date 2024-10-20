@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5370789831621124553}
   - component: {fileID: 8410326977318168789}
   - component: {fileID: 8857842720018110328}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PassiveMoveEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -165,6 +165,7 @@ MonoBehaviour:
   _defaultMovementSpeed: 2
   _defaultMovementForce: 15
   _defaultState: {fileID: 5291306884957440050}
+  _maxHealth: 0
 --- !u!1 &3265955349377854953
 GameObject:
   m_ObjectHideFlags: 0
@@ -175,7 +176,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3639055678795975332}
   - component: {fileID: 5291306884957440050}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RandomMovementState
   m_TagString: Untagged
   m_Icon: {fileID: 0}

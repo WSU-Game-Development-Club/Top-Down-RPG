@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 9146554240624085663}
   - component: {fileID: 2041528965433498498}
-  - component: {fileID: 4141813370403117028}
   - component: {fileID: 922113623546404517}
-  - component: {fileID: 5509993555185973594}
-  m_Layer: 0
-  m_Name: Circle
+  - component: {fileID: 8892370546372301663}
+  - component: {fileID: 8100299465952018352}
+  m_Layer: 8
+  m_Name: PlayerProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -87,22 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4141813370403117028
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6595819043397827874}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7d6518c13a6b4d46be6c4380910b2cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletSpeed: 35.31
-  bulletLife: 0.35
-  bulletDamage: 100
-  hitIndicator: {fileID: 6429115628783744405, guid: e14af8f3a6b2b44efb40765aa6ef8b59, type: 3}
 --- !u!50 &922113623546404517
 Rigidbody2D:
   serializedVersion: 4
@@ -130,8 +114,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!70 &5509993555185973594
-CapsuleCollider2D:
+--- !u!58 &8892370546372301663
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -159,9 +143,25 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 1}
-  m_Direction: 1
+  serializedVersion: 2
+  m_Radius: 0.1
+--- !u!114 &8100299465952018352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6595819043397827874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 212097aaea2a3ea488e8b8050dae143b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 30
+  lifespan: 1
+  damage: 10
+  knockback: 30

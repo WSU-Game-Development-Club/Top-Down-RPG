@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5370789831621124553}
   - component: {fileID: 8410326977318168789}
   - component: {fileID: 8857842720018110328}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CowardlyEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -166,6 +166,7 @@ MonoBehaviour:
   _defaultMovementSpeed: 15
   _defaultMovementForce: 30
   _defaultState: {fileID: 5680336619795680886}
+  _maxHealth: 0
 --- !u!1 &3265955349377854953
 GameObject:
   m_ObjectHideFlags: 0
@@ -176,7 +177,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3639055678795975332}
   - component: {fileID: 6590730787343359393}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FleeFromPlayerState
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -229,7 +230,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2232075112719031191}
   - component: {fileID: 5918128605510189296}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LookForPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -279,7 +280,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4605625122859732594}
   - component: {fileID: 5680336619795680886}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HoldStillState
   m_TagString: Untagged
   m_Icon: {fileID: 0}

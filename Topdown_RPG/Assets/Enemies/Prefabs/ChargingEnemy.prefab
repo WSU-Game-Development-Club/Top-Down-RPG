@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3868018114233703345}
   - component: {fileID: 7767775061139686626}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LookingForPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63,7 +63,7 @@ GameObject:
   - component: {fileID: 5370789831621124553}
   - component: {fileID: 8410326977318168789}
   - component: {fileID: 8857842720018110328}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ChargingEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -217,6 +217,7 @@ MonoBehaviour:
   _defaultMovementSpeed: 2
   _defaultMovementForce: 30
   _defaultState: {fileID: 1111894367870499848}
+  _maxHealth: 0
 --- !u!1 &8424285735565132712
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,7 +228,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3028496451203499066}
   - component: {fileID: 8244513055358276360}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ChargingPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -280,7 +281,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3686653366568246630}
   - component: {fileID: 1111894367870499848}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MovingRandomly
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -334,7 +335,7 @@ GameObject:
   m_Component:
   - component: {fileID: 166170592318585025}
   - component: {fileID: 6887659760241903510}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HoldStill
   m_TagString: Untagged
   m_Icon: {fileID: 0}

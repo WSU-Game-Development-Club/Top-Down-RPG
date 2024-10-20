@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
+//DEPRECATED: don't use this, extend Projectile instead
 
 /// <summary>
 /// creates the bullet and translate it a certain direction for a x ammount of time
