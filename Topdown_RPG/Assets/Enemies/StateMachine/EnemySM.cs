@@ -6,7 +6,7 @@ using static UnityEngine.GraphicsBuffer;
 [RequireComponent(typeof(Rigidbody2D))]
 
 //This is the statemachine class, of which all the states should be children.
-public class EnemySM : MonoBehaviour {
+public class EnemySM : MonoBehaviour, IDamageable, IKnockbackable {
 
     [SerializeField] private float _defaultMovementSpeed;
     public float DefaultMovementSpeed {
@@ -55,15 +55,46 @@ public class EnemySM : MonoBehaviour {
     }
 
     private void Awake() {
+        _currentHealth = _maxHealth;
         _rb = GetComponent<Rigidbody2D>();
         _collider = GetComponent<CircleCollider2D>();
         ResetMovementParameters();
     }
     [SerializeField] private EnemyState _defaultState;
-    private void Start() {
-        SwitchState(_defaultState);
+    private EnemyState _currentState;
+    public EnemyState CurrentState {
+        get {
+            return _currentState;
+        }
     }
 
+    private void Start() {
+        SwitchState(GetDefaultState());
+    }
+
+    /// <summary>
+    /// Gets the default state, logs warnings if it's not set in the inspector and errors if there are no states at all
+    /// </summary>
+    /// <returns>the default state or null</returns>
+    private EnemyState GetDefaultState() {
+        if(_defaultState != null) {
+            return _defaultState;
+        }
+        Debug.LogWarning($"Problem with {gameObject.name}: No default state assigned in inspector!");
+        EnemyState[] states = GetComponentsInChildren<EnemyState>(true);
+        if (states.Length == 0) {
+            Debug.LogError($"Fatal problem with {gameObject.name}: No states found in children at all. The state machine needs at least one EnemyState in its children to operate.");
+            return null;
+        }
+        foreach (EnemyState state in states) {
+            if (state.transform.parent == this) {
+                _defaultState = state;
+                return _defaultState;
+            }
+        }
+        Debug.LogError($"Fatal problem with {gameObject.name}: Make sure at least one EnemyState is in a direct child of the state machine.");
+        return null;
+    }
 
 
     /// <summary>
@@ -84,6 +115,11 @@ public class EnemySM : MonoBehaviour {
         }
         ResetMovementParameters();
         newState.gameObject.SetActive(true);
+        _currentState = newState;
+    }
+
+    public void ExitStateImmediate() {
+        _currentState.ExitStateImmediate();
     }
 
     /// <summary>
@@ -116,6 +152,23 @@ public class EnemySM : MonoBehaviour {
         _movementParameters.Target = transform.position;
         _movementParameters.Speed = _defaultMovementSpeed;
         _movementParameters.Force = _defaultMovementForce;
+    }
+
+
+    [SerializeField] private float _maxHealth;
+    private float _currentHealth;
+    public void Damage(float amount)
+    {
+        _currentHealth -= amount;
+        if(_currentHealth < 0){
+            Destroy(gameObject);
+        }
+
+
+    }
+
+    public void Knockback(Vector2 force) {
+        _rb.AddForce(force, ForceMode2D.Impulse);
     }
 
 }

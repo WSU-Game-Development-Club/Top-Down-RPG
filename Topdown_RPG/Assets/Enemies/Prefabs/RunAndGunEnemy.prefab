@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5370789831621124553}
   - component: {fileID: 8410326977318168789}
   - component: {fileID: 8857842720018110328}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RunAndGunEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4b309ae6ae5af8f40bdf306519752cec, type: 3}
   m_Color: {r: 0.90943396, g: 0.6426233, b: 0.15443218, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -165,6 +165,7 @@ MonoBehaviour:
   _defaultMovementSpeed: 5
   _defaultMovementForce: 30
   _defaultState: {fileID: 3610281605098023858}
+  _maxHealth: 30
 --- !u!1 &6604144201712215171
 GameObject:
   m_ObjectHideFlags: 0
@@ -175,7 +176,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5563658548447201459}
   - component: {fileID: 3610281605098023858}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShootState
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -230,7 +231,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4614294320125110392}
   - component: {fileID: 4960695678709572082}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MoveRandomlyState
   m_TagString: Untagged
   m_Icon: {fileID: 0}

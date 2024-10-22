@@ -11,11 +11,12 @@ public class Attacking : MonoBehaviour
     private float fireTimer;
 
     private bool canMelee;
-    private float meleeTimer;    
+    private float meleeTimer;
+    [SerializeField]private float meleeDamage;
 
     private PolygonCollider2D meleeColider;
 
-    [SerializeField] private GameObject bullet;
+    [SerializeField] private Projectile bulletPrefab;
     [SerializeField] private GameObject gunRotationPoint;
     [SerializeField] private GameObject meleeRange;
     [SerializeField] private Transform gunLocation;
@@ -84,7 +85,10 @@ public class Attacking : MonoBehaviour
         if(Input.GetMouseButton(0) && canFire)
         {
             canFire = false;
-            Instantiate(bullet, gunLocation.position, gunLocation.rotation);
+            Projectile bullet = Instantiate(bulletPrefab, gunLocation.position, gunLocation.rotation);
+            Vector2 direction = gunLocation.rotation * Vector3.right.normalized;
+            bullet.Fire(direction);
+
         }
     }
 
@@ -96,8 +100,9 @@ public class Attacking : MonoBehaviour
         Timer(ref meleeTimer, meleeDelay, ref canMelee);
 
         if (Input.GetMouseButtonDown(1) && canMelee)
-        {            
-            canMelee = false;
+        {
+            
+            //canMelee = false;
             StartCoroutine(EnableMeleeCollider());
             //Debug.Log("melee");            
         }
@@ -110,21 +115,52 @@ public class Attacking : MonoBehaviour
     IEnumerator EnableMeleeCollider()
     {
         meleeColider.enabled = true;
+
         // Wait for a short period (meleeDelay), needs to be changed later but im lazy
         yield return new WaitForSeconds(meleeDelay);
         meleeColider.enabled = false;
+        
     }
 
     /// <summary>
     /// Checks the collision
     /// </summary>
     /// <param name="collision"></param>
+    ///
+
+
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    Debug.Log("help");
+    //    if (collision.collider.CompareTag("Enemy") && meleeColider.enabled)
+    //    {
+    //        if (collision.gameObject.TryGetComponent(out IDamageable enemy))
+    //        {
+    //            enemy.Damage(meleeDamage);
+
+    //        }
+
+    //        meleeColider.enabled = false;
+    //        Instantiate(hitIndicator);
+    //    }
+    //}
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
         if (collision.CompareTag("Enemy") && meleeColider.enabled)
-        {            
+        {
+            // Try to get the IDamageable component and apply damage
+            if (collision.gameObject.TryGetComponent(out IDamageable enemy))
+            {
+                enemy.Damage(meleeDamage);
+            }
+
+            // Disable the melee collider and instantiate hit indicator
             meleeColider.enabled = false;
             Instantiate(hitIndicator);
         }
     }
+
+
 }

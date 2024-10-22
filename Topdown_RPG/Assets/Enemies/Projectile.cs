@@ -2,17 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
-public class Projectile : MonoBehaviour
+public abstract class Projectile : MonoBehaviour
 {
-    [SerializeField] private float _speed;
+    [SerializeField] protected float speed;
+    [SerializeField] protected float lifespan = 1f;
 
+    protected Rigidbody2D rb;
+
+    private float timeAwakened;
     public void Fire(Vector2 dir) {
-        GetComponent<Rigidbody2D>().velocity = dir.normalized * _speed;
+        if(rb == null) {
+            rb = GetComponent<Rigidbody2D>();
+        }
+        rb.velocity = dir.normalized * speed;
     }
-
-    private void OnTriggerEnter2D(Collider2D collision) {
-        if(!collision.gameObject.TryGetComponent(out EnemySM _) && !collision.gameObject.TryGetComponent(out Projectile _)) {
+    
+    private void Awake() {
+        timeAwakened = Time.time;
+        rb = GetComponent<Rigidbody2D>();
+    }
+    private void Update() {
+        if (Time.time - timeAwakened > lifespan) {
             Destroy(gameObject);
         }
+
     }
 }
