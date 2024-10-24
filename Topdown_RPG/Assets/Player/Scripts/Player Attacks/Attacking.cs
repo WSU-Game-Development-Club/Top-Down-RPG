@@ -148,12 +148,13 @@ public class Attacking : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
-        if (collision.CompareTag("Enemy") && meleeColider.enabled)
+        if (meleeColider.enabled)
         {
             // Try to get the IDamageable component and apply damage
             if (collision.gameObject.TryGetComponent(out IDamageable enemy))
             {
                 enemy.Damage(meleeDamage);
+
             }
 
             // Disable the melee collider and instantiate hit indicator
