@@ -15,8 +15,12 @@ public class IndicatorParent : MonoBehaviour
     {
         // changed to find object of type because it's faster
         //player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        player = FindObjectOfType<PlayerController>().transform;
+        
+            player = FindObjectOfType<PlayerController>()?.transform;
+        
+        
     }
+
     private void Update()
     {
         playerLocation = player.transform.position;

@@ -6,18 +6,13 @@ using UnityEngine;
 /// In charge of controlling player movement
 /// </summary>
 [RequireComponent(typeof(Rigidbody2D))]
-public class PlayerController : MonoBehaviour, IDamageable
+public class PlayerController : MonoBehaviour
 {
     // the player's speed in units/second
     [SerializeField] private float speed;
 
     // reference to game object's rigidbody behavior
     private Rigidbody2D rb;
-
-    public void Damage(float amount)
-    {
-
-    }
 
     // called when script is loaded into memory
     private void Awake()
