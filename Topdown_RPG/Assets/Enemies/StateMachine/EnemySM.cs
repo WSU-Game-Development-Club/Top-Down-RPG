@@ -28,12 +28,20 @@ public class EnemySM : MonoBehaviour, IDamageable, IKnockbackable {
     private Rigidbody2D _rb;
     public Rigidbody2D RB {
         get {
+            if (_rb == null)
+            {
+                _rb = GetComponent<Rigidbody2D>();
+            }
             return _rb;
         }
     }
     private CircleCollider2D _collider;
     public CircleCollider2D Collider {
         get {
+            if(_collider == null)
+            {
+                _collider = GetComponent<CircleCollider2D>();
+            }
             return _collider;
         }
     }
